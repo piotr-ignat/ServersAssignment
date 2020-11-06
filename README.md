@@ -3,7 +3,7 @@
 In `api/src` run:
 
 ```shell
-npm ci
+npm start
 ```
 
 ### Run
