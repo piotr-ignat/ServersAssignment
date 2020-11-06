@@ -1,0 +1,21 @@
+header {
+  background-color: #494e62;
+  display: flex;
+  align-items: center;
+  padding: 18px 25px;
+
+  div:first-of-type {
+    border: 2px solid #7376e0;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+  }
+
+  div:last-of-type {
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    border-right: 2px solid #757b90;
+    padding: 10px 30px 10px 10px;
+  }
+}

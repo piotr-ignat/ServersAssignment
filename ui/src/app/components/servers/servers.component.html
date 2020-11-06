@@ -1,0 +1,26 @@
+<div class="table">
+
+  <div class="table__servers">
+    <div>
+      <h3>Servers</h3>
+      <p>Number of elements: {{servers?.length}}</p>
+    </div>
+    <div>
+      <label>
+        <fa-icon [icon]="faSearch" [styles]="{'stroke': '#b5b2bb', 'color': '#b5b2bb'}"></fa-icon>
+        <input type="search" placeholder="Search" [(ngModel)]="searchText">
+      </label>
+    </div>
+  </div>
+
+  <div class="table__head">
+    <div class="table__name">NAME</div>
+    <div class="table__status">STATUS</div>
+    <div class="table__action"></div>
+  </div>
+
+  <div class="table__body">
+    <server *ngFor="let server of servers | filter: searchText" [server]="server" (statusTurn)="onStatusTurn($event)" (serverReboot)="onReboot($event)"></server>
+  </div>
+
+</div>

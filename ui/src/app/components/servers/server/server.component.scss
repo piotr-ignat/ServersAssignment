@@ -1,0 +1,83 @@
+.table__row {
+  display: flex;
+  padding: 20px 40px;;
+  border: 1px solid #c2ccd2;
+  border-top: none;
+  background-color: white;
+  position: relative;
+}
+
+.table__name,
+.table__status{
+  width: 20%;
+}
+
+.table__name {
+  color: #474d61;
+  font-weight: 700;
+}
+
+.table__status {
+  text-align: center;
+}
+
+.table__action {
+  width: 60%;
+  text-align: right;
+
+  fa-icon {
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 10px;
+
+    &:hover {
+      background-color: #f2f3f6;
+    }
+  }
+}
+
+.table__inputSelect {
+  position: absolute;
+  visibility: hidden;
+  right: -3px;
+  top: -3px;
+  z-index: 5;
+  background-color: white;
+  box-shadow: 0 0 10px #9494a2;
+
+  p {
+    margin: 0;
+    padding: 20px 60px 20px 25px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f2f3f6;
+    }
+  }
+}
+
+.table__inputOption-disabled {
+  opacity: .5;
+  cursor: default !important;
+
+  &:hover {
+    background-color: white !important;
+  }
+}
+
+.table__status-online {
+  color: #2fcbd5;
+}
+
+.table__status-offline {
+  color: #474d61;
+
+  fa-icon {
+    color: #eb5786;
+  }
+}
+
+.table__status-rebooting {
+  color: #9da9d4;
+}
+

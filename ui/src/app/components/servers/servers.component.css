@@ -1,0 +1,58 @@
+.table {
+  max-width: 1140px;
+  margin: 50px auto;
+}
+
+.table__servers {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.table__servers div:first-of-type {
+  color: #474d61;
+  letter-spacing: 0.05rem;
+}
+.table__servers h3, .table__servers p {
+  margin: 0;
+}
+.table__servers label {
+  border: 2px solid #b5b2bb;
+  border-radius: 20px;
+  padding: 0.5rem;
+}
+.table__servers label fa-icon {
+  margin-right: 10px;
+}
+.table__servers input {
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem;
+  color: #848484;
+  font-weight: bold;
+}
+
+.table__head {
+  display: flex;
+  padding: 20px 40px;
+  border: 1px solid #c2ccd2;
+  background-color: white;
+  color: #9da9d4;
+  font-weight: 700;
+}
+
+.table__head,
+.table__body {
+  font-size: 13px;
+}
+
+.table__name,
+.table__status {
+  width: 20%;
+}
+
+.table__status {
+  text-align: center;
+}
+
+/*# sourceMappingURL=servers.component.css.map */

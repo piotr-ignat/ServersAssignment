@@ -1,0 +1,17 @@
+<div class="table__row" >
+  <div class="table__name">{{server.name}}</div>
+  <div class="table__status"
+       [ngClass]="{'table__status-online': server.status === 'ONLINE', 'table__status-offline': server.status === 'OFFLINE', 'table__status-rebooting': server.status === 'REBOOTING'}">
+    <fa-icon *ngIf="server.status === 'ONLINE'" [icon]="faCircle" size="xs"></fa-icon>
+    <fa-icon *ngIf="server.status === 'OFFLINE'" [icon]="faTimes" ></fa-icon>
+    {{server.status}}
+  </div>
+  <div class="table__action">
+    <fa-icon [icon]="faEllipsisH" [styles]="{'stroke': '#b5b2bb', 'color': '#b5b2bb'}" (click)="select.style.visibility = 'visible'"></fa-icon>
+  </div>
+
+  <div class="table__inputSelect" #select>
+    <p (click)="onTurn(select)" [ngClass]="{'table__inputOption-disabled': server.status === 'REBOOTING'}">Turn {{server.status === 'ONLINE' ? 'Off' : 'On'}}</p>
+    <p (click)="onReboot(select)" [ngClass]="{'table__inputOption-disabled': server.status !== 'ONLINE'}">Reboot</p>
+  </div>
+</div>
